@@ -1,5 +1,5 @@
-FROm node:alpine
+FROM node:alpine
 COPY ./ ./
-RUn npm install
-EXPOSE 8080
+RUN npm install
+EXPOSE 8081
 CMD ["npm","start"]
