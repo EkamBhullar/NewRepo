@@ -5,7 +5,7 @@ const port=process.env.PORT;
 app.get('/',(req,res)=>{
     res.send("HII VAnsh GAba Deploy")
 })
-app.listen(8081,()=>{
-    console.log("App listening", 8081)
+app.listen(8082,()=>{
+    console.log("App listening", 8082)
 })
 
