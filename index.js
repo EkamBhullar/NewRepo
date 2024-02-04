@@ -7,6 +7,9 @@ app.use(express.static("public"));
 app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/public/index.html');
 })
+app.get('/about',(req,res)=>{
+    res.sendFile(__dirname + '/public/index.html');
+})
 app.get('/style.css', function(req, res) {
     res.sendFile(path.join(__dirname, '/public/style.css'));
 });
