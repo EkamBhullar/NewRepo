@@ -15,3 +15,4 @@ app.listen(8082,()=>{
     console.log("App listening", 8082)
 })
 
+module.exports = app;
