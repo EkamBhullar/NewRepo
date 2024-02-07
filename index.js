@@ -1,6 +1,4 @@
-const tracer = require('dd-trace').init()
 const express=require('express');
-
 require('dotenv').config()
 const path = require('path');
 const app=express();
