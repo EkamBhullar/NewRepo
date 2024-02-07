@@ -1,6 +1,6 @@
 const request = require('supertest');
 const assert = require('assert');
-const app = require('./index');
+const app = require('./testserver');
 
 describe('Unit Testing ', function() {
     it('should return index.html on GET /', function(done) {
