@@ -24,8 +24,6 @@ describe('Unit Testing ', function() {
                 done();
             });
     });
-
-    // Add more test cases for HTML content here
     it('should have a valid HTML structure', function(done) {
         request(app)
             .get('/')
