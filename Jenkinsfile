@@ -40,11 +40,6 @@ pipeline {
                 echo "Code Deployed succesfully to ${env.PRODUCTION_ENVIRONMENT}"
                 
             }
-        } stage('Updating') {
-            steps {
-                echo "Code Deployed succesfully to ${env.PRODUCTION_ENVIRONMENT}"
-                
-            }
-        }
+        } 
     }
 }
