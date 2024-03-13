@@ -41,5 +41,11 @@ pipeline {
                 
             }
         } 
+        stage('Deploy to Production 2nd time') {
+            steps {
+                echo "Code Deployed succesfully to ${env.PRODUCTION_ENVIRONMENT}"
+                
+            }
+        } 
     }
 }
