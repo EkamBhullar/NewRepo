@@ -1,5 +1,6 @@
 const request = require('supertest');
-const app = require('./your-express-app-file'); // Replace 'your-express-app-file' with the name of your Express app file
+const assert = require('assert');
+const app = require('./testserver');
 
 describe('GET /', () => {
   test('It should respond with status code 200', async () => {
