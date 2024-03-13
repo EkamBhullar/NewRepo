@@ -13,5 +13,3 @@ describe('GET /', () => {
     expect(response.headers['content-type']).toContain('text/html');
   });
 });
-
-
