@@ -1,13 +1,39 @@
 const request = require('supertest');
+const assert = require('assert');
 const app = require('./testserver');
-const { expect } = require('chai'); // Use Chai for assertions
 
-describe('Unit Testing with Mocha and Chai', () => {
-    it('should return index.html on GET /', async () => {
-        const response = await request(app).get('/');
-        expect(response.status).to.equal(200);
-        expect(response.type).to.equal('text/html');
+describe('Unit Testing ', function() {
+    it('should return index.html on GET /', function(done) {
+                request(app)
+                    .get('/')
+                    .expect(200)
+                    .end(function(err, res) {
+                        if (err) return done(err);
+                        assert.strictEqual(res.type, 'text/html');
+                        done();
+                    });
+            });
+
+    it('should return style.css on GET /style.css', function(done) {
+        request(app)
+            .get('/style.css')
+            .expect(200)
+            .end(function(err, res) {
+                if (err) return done(err);
+                assert.strictEqual(res.type, 'text/css');
+                done();
+            });
     });
-
-    // Add more test cases as needed
+    it('should have a valid HTML structure', function(done) {
+        request(app)
+            .get('/')
+            .expect(200)
+            .end(function(err, res) {
+                if (err) return done(err);
+                // Check if the response body contains the head and body tags
+                assert(res.text.includes('<head>') && res.text.includes('</head>'));
+                assert(res.text.includes('<body>') && res.text.includes('</body>'));
+                done();
+            });
+    });
 });
