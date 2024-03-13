@@ -35,17 +35,6 @@ pipeline {
                 sleep time: 10, unit: 'SECONDS'
             }
         }
-        stage('Deploy to Production') {
-            steps {
-                echo "Code Deployed succesfully to ${env.PRODUCTION_ENVIRONMENT}"
-                
-            }
-        } 
-        stage('Deploy to Production 2nd time') {
-            steps {
-                echo "Code Deployed succesfully to ${env.PRODUCTION_ENVIRONMENT}"
-                
-            }
-        } 
+
     }
 }
