@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jest test.js  --coverage --watchAll=false"
+    "test": "jest test.js --runInBand --detectOpenHandles --forceExit"
   },
   "author": "",
   "license": "ISC",
